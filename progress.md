@@ -8,11 +8,11 @@ I first cleaned up the data (fun!), made the column names easier to understand, 
 
 Did some initial correlation analysis.  Found some not terribly interesting things, like:
 
-```
 Post patient satisfaction and post predicted patient satisfaction (by the surgeon) are very closely correlated (.78).
+
 Post patient pain and post patient satisfaction are very closely correlated (.58).
+
 People who are more depressed going into surgery tend to be less satisfied with surgery (-.177).
-```
 
 Moved on to [bayesian networks](http://en.wikipedia.org/wiki/Bayesian_network).
 
@@ -22,7 +22,6 @@ Got a diagram that looks really interesting, but doesn't actually have a lot of 
 
 Arrows essentially indicate causation, but the causation could be through another variable.  Some conclusions from this:
 
-```
 Age is a cause of marital status (really?!)
 
 The higher you are on the marital state (1=single, 2=married, 3=divorced, 4=widowed) scale, the more likely you are to be depressed (causal, somewhat obvious)
@@ -30,7 +29,6 @@ The higher you are on the marital state (1=single, 2=married, 3=divorced, 4=wido
 How well your surgeon thinks you are doing (post_s_p_sat) may cause how well you think you are doing (post_p_sat)
 
 How well your doctor thinks you will do before the surgery (pre_d_sat) may have a causal relationship with how well you do after surgery (post_ox).  There is no similar relationship between pre_p_sat and post_ox, which means that the doctor may have some predictive capability that the patient does not.  pre_n_sat (how much the nurses think the patient will be satisfied) has a weaker relationship than the doctor does, so doctors may outpredict nurses (or affect the outcome more with their belief).
-```
 
 ## Trees
 
@@ -40,9 +38,7 @@ One interesting thing:
 
 ![tree](pain_doctor_nice.png)
 
-```
 You can predict how nice a doctor thinks a patient is pretty well using their age and pre_exp_pain (how much pain they expect).  Doctors think that patients who are older, or patients who expect to experience more pain, are less nice.
-```
 
 ## Kmeans
 
