@@ -1,0 +1,41 @@
+doctor rating of patient niceness (d_nice) correlated to pain, doctor satisfaction, age
+
+surgeon rating of patient niceness (s_nice) correlated to pre_p_exp_pain, pre_doctor_satisfaction
+
+post_p_pain            pre_phys_sat              post_p_sat
+post_p_sat                  pre_ox             post_p_pain
+post_p_pain               phys_nice              post_p_sat
+
+post_s_p_sat              post_p_sat                post_tug 0.5477331
+post_s_p_sat.16188 post_s_p_sat           pre_anx_state              post_p_sat 0.5483956
+post_s_p_sat.16332 post_s_p_sat              post_p_sat               tug_ratio 0.5492910
+post_s_p_sat.16330 post_s_p_sat              post_p_sat              post_s_sat 0.5495020
+post_s_p_sat.15894 post_s_p_sat                     age              post_p_sat 0.5510246
+post_s_p_sat.16331 post_s_p_sat              post_p_sat               tug_delta 0.5510793
+
+
+"Soft" measures such as pain are a better predictor of post patient satisfaction than "hard" indicators like tug delta.
+
+"Soft" measures like pain are almost as good at predicting things like tug_delta as things like pre_ox, post_tug, and age are.
+
+Doctors who think their patients are nice tend to think they will recover better (pre_d_sat and s_nice).
+
+Doctors think that more anxious patients are less nice.  (s_nice and pre_anx_state/pre_anx_trait).
+
+Doctor niceness (d_nice) and surgeon niceness (s_nice) not very closely correlated (.38)
+
+Doctors think that nicer patients will be more satisfied (d_nice, pre_d_sat). (.63)  Correlation is .43 for physiologists (phys_nice and pre_phys_nice), and .812 for nurses (pre_n_dat, n_nice).  Niceness measurements of doctor, nurse, and physiologist only weakly correlated. (.25 for doctor/nurse, .09 for phys/nurse, .08 for doctor/phys).
+
+Nurses much better than doctors at predicting patient satisfaction before the surgery (pre_d_sat/post_p_sat -> .03, pre_n_sat/post_p_sat -> .15), and much better than patients (pre_p_sat/post_p_sat -> .02).
+
+Patient self-assessment of post health (post_p_health) not correlated to their satisfaction (post_p_sat).  But post_p_health correlated to tug_delta and post_ox.
+
+post_p_sat correlated with post_anx_state and post_anx_state (-.3 and -.29).
+
+How nice the doctor thinks the patient is (s_nice and d_nice) correlate somewhat with how satisfied the surgeon is with the surgery (post_s_sat) (.13 and .1).
+
+Doctors think depressed patients will do worse (sumbdi_admin, pre_d_sat), but this is not actually the case (post_p_sat) (-.32 vs -.14).
+
+More depressed patients have a higher tug (.34 correlation between sumbdi_admin and pre_tug).
+
+
